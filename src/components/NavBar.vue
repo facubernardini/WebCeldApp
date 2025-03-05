@@ -2,8 +2,9 @@
     <nav>
         <ul>
             <li><img src="@/assets/logoCeldApp.png" alt="Logo de la página" width="180px"/></li>
-            <li><a href="/">Inicio</a></li>
             <li><a href="/">Ejecutar App</a></li>
+            <li><a href="/">Reporte de errores</a></li>
+            <li><a href="mailto:facubernardini@hotmail.com?Subject=CeldApp">Contacto</a></li>
         </ul>
     </nav>
 </template>
@@ -26,13 +27,16 @@ nav ul {
 
 nav ul li {
     padding: 10px;
-    margin: 0 40px;
+    margin: 0 30px;
     text-align: center;
 }
 
 nav ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
     color: black;
-    font-size: 20px;
 }
+
 </style>

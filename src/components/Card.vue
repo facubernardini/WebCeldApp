@@ -1,7 +1,7 @@
 <template>
     <article class="card">
-        <h3>{{ title }}</h3>
-        <p>{{ description }}</p>
+        <h3 class="title">{{ title }}</h3>
+        <p class="description">{{ description }}</p>
     </article>
 </template>
 
@@ -27,5 +27,13 @@ export default {
 
 .card:hover {
     box-shadow: 0 4px 30px rgba(112, 229, 255, 0.65);
+}
+
+.title{
+    font-family: "Montserrat", sans-serif;
+}
+
+.description {
+    font-family: "Montserrat", sans-serif;
 }
 </style>

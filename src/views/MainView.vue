@@ -1,19 +1,18 @@
 <template>
     <div class="home">
         <header>
-            <NavBar></NavBar>
+            <NavBar/>
         </header>
 
         <main>
             <section class="top-content">
                 <h1 class="subtitle">{{ subtitle }}</h1>
                 <article class="bottom-description">{{ bottomDescription }}</article>
-                <DownloadButton></DownloadButton>   
+                <DownloadButton/>   
             </section>
 
             <section class="cards-container">
-                <Card 
-                    v-for="(card, index) in cards"
+                <Card v-for="(card, index) in cards"
                     :key="index"
                     :title="card.title"
                     :description="card.description"
@@ -26,8 +25,8 @@
         </main>
 
         <footer>
-            <article class="footer">
-                <h2>Pie de página</h2>
+            <article>
+                <h2 class="footer">Copyright © 2025 CeldApp. Todos los derechos reservados</h2>
             </article>
         </footer>
     </div>
@@ -42,7 +41,7 @@ export default {
     components: { Card, DownloadButton, NavBar },
     data() {
         return {
-            subtitle: 'UNA NUEVA FORMA \n DE APRENDER \n CIENCIA DE MATERIALES',
+            subtitle: 'Una nueva forma \n de aprender \n ciencia de materiales',
             bottomDescription: 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.',
             cards: [
                 { title: 'Card 1', description: 'Descripción 1' },
@@ -51,7 +50,7 @@ export default {
                 { title: 'Card 4', description: 'Descripción 4' },
             ],
         };
-    },
+    }
 };
 </script>
 
@@ -75,10 +74,10 @@ export default {
 }
 
 .subtitle {
-    font-family: Verdana;
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
     font-weight: bold;
     white-space: pre-line;
-    font-size: 25px;
     align-content: center;
     text-align: start;
     flex: 6;
@@ -87,8 +86,9 @@ export default {
 }
 
 .bottom-description {
-    font-family: Verdana;
-    font-weight: 100;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
     color: beige;
     white-space: pre-line;
     flex: 1;
@@ -103,6 +103,7 @@ export default {
 }
 
 .bottom-content {
+    font-family: "Montserrat", sans-serif;
     color: white;
     display: flex;
     justify-content: center;
@@ -110,6 +111,10 @@ export default {
 }
 
 .footer {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
     margin-top: 1200px;
+    padding-bottom: 50px;
 }
 </style>

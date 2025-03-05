@@ -1,12 +1,22 @@
 <template>
-    <button class="download-btn" @click="handleClick">Descargar App</button>
+    <button class="download-btn" @click="mostrarConsoleLog">Descargar App</button>
 </template>
 
-<script setup>
+<script>
+export default {
+    name: 'DownloadButton',
+    methods: {
+        mostrarConsoleLog() {
+            console.log('Descarga')
+        }
+    }
+}
 </script>
 
 <style scoped>
 .download-btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
     height: 40px;
     width: 180px;
     padding: 10px 20px;
