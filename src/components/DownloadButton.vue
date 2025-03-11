@@ -7,7 +7,7 @@ export default {
     name: 'DownloadButton',
     methods: {
         mostrarConsoleLog() {
-            console.log('Descarga')
+            console.log('¡Gracias por descargar CeldApp!')
         }
     }
 }
@@ -27,6 +27,7 @@ export default {
     cursor: pointer;
     transition: 0.4s;
 }
+
 .download-btn:hover {
     background-color: #0056b3;
     box-shadow: 0px 0px 15px rgba(112, 229, 255, 0.418);

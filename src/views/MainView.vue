@@ -15,18 +15,20 @@
                 <Card v-for="(card, index) in cards"
                     :key="index"
                     :title="card.title"
+                    :background_url="card.background_url"
+                    :img_url="card.img_url"
                     :description="card.description"
                 />
             </section>
 
             <section class="bottom-content">
-                <p>Contenido inferior a las cards</p>
+                <p>{{ bottomContent }}</p>
             </section>
         </main>
 
         <footer>
             <article>
-                <h2 class="footer">Copyright © 2025 CeldApp. Todos los derechos reservados</h2>
+                <h2 class="footer">{{ footer }}</h2>
             </article>
         </footer>
     </div>
@@ -44,11 +46,13 @@ export default {
             subtitle: 'Una nueva forma \n de aprender \n ciencia de materiales',
             bottomDescription: 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.',
             cards: [
-                { title: 'Card 1', description: 'Descripción 1' },
-                { title: 'Card 2', description: 'Descripción 2' },
-                { title: 'Card 3', description: 'Descripción 3' },
-                { title: 'Card 4', description: 'Descripción 4' },
+                { title: 'Procesos de Cristalización', img_url: '/src/assets/Cristalizacion.png', background_url: '/src/assets/Card1.png', description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
+                { title: 'Estructuras Cristalinas', img_url: '/src/assets/EstructurasCristalinas.png', background_url: '/src/assets/Card2.png', description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
+                { title: 'Diagramas de Fase', img_url: '/src/assets/DiagramasDeFase.png', background_url: '/src/assets/Card3.png', description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
+                { title: 'Realidad Aumentada', img_url: '/src/assets/RealidadAumentada.png', background_url: '/src/assets/Card4.png', description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
             ],
+            bottomContent: '¡Gracias por usar CeldApp!',
+            footer: 'Copyright © 2025 CeldApp. Todos los derechos reservados',
         };
     }
 };
@@ -66,7 +70,7 @@ export default {
 
 .top-content {
     display: flex;
-    height: 85vh;
+    height: 88vh;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -82,7 +86,7 @@ export default {
     text-align: start;
     flex: 6;
     align-self: flex-start;
-    margin-left: 28%;
+    margin-left: 28vw;
 }
 
 .bottom-description {
@@ -92,29 +96,29 @@ export default {
     color: beige;
     white-space: pre-line;
     flex: 1;
-    margin-top: 150px;
+    margin-top: 10vh;
 }
 
 .cards-container {
     display: flex;
-    gap: 100px;
-    justify-content: center;
-    margin: 350px 0;
+    justify-content: space-evenly;
+    margin: 16vh 0;
+    flex-wrap: wrap;
 }
 
 .bottom-content {
     font-family: "Montserrat", sans-serif;
+    font-size: 28px;
     color: white;
     display: flex;
     justify-content: center;
-    margin: 350px 0;
 }
 
 .footer {
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: lighter;
-    margin-top: 1200px;
-    padding-bottom: 50px;
+    margin-top: 300px;
+    padding: 50px;
 }
 </style>
