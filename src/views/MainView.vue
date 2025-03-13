@@ -119,6 +119,24 @@ export default {
     font-size: 16px;
     font-weight: lighter;
     margin-top: 300px;
-    padding: 50px;
+    padding: 30px;
+}
+
+@media(max-width: 800px){
+    
+    .subtitle {
+        align-content: center;
+        text-align: center;
+        flex: 2;
+        align-self: center;
+        margin: auto;
+    }
+
+    .bottom-description {
+        color: rgb(0, 0, 0);
+        white-space: pre-line;
+        flex: 1;
+        margin-top: 10vh;
+    }
 }
 </style>
