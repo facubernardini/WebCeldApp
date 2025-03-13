@@ -1,13 +1,14 @@
 <template>
-    <button class="download-btn" @click="mostrarConsoleLog">Descargar App</button>
+    <button class="download-btn" @click="descargarApk">Descargar App</button>
 </template>
 
 <script>
 export default {
     name: 'DownloadButton',
     methods: {
-        mostrarConsoleLog() {
-            console.log('¡Gracias por descargar CeldApp!')
+        descargarApk() {
+            const apkURL = 'https://drive.google.com/file/d/1WTD0vVcPm9jfGUG41NHGKXp7SmGoteoH/view?usp=sharing';
+            window.open(apkURL, '_blank');
         }
     }
 }
