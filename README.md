@@ -7,8 +7,9 @@ Tiene como objetivo **informar** a los usuarios sobre las funcionalidades de la 
 ## Tecnologías utilizadas
 
 + **Vue 3** - Framework progresivo de JavaScript
-+ **Firebase** - Hosting y despliegue
 + **Vite** - Herramienta de desarrollo y construcción rápida
++ **Firebase** - Hosting y despliegue
++ **Hostinger** - Proveedor de dominio
 
   
-#### Se puede acceder con el siguiente link: [CeldApp](https://celdapp.site)
+#### Acceso a la página web [aquí](https://celdapp.site)
