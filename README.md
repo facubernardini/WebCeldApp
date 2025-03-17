@@ -1,35 +1,15 @@
-# .
+# CeldApp: Desarrollo de página web y deploy en firebase
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto consta del diseño e implementación de una **landing page** para mi proyecto CeldApp.  
+  
+Tiene como objetivo **informar** a los usuarios sobre las funcionalidades de la aplicación, proporcionar un link de **reporte de problemas y contacto**, como así también la posibilidad de **descargar** la aplicación móvil.
 
-## Recommended IDE Setup
+## Tecnologías utilizadas
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
++ **Vue 3** - Framework progresivo de JavaScript
++ **Vite** - Herramienta de desarrollo y construcción rápida
++ **Firebase** - Hosting y despliegue
++ **Hostinger** - Proveedor de dominio
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+  
+#### Acceso a la página web [aquí](https://celdapp.site)
