@@ -1,25 +1,26 @@
 <template>
     <article :style="{ 'background-image': 'url('+background_url+')' }" class="card">
-        <h3 class="title">{{ title }}</h3>
+        <h3 class="card-title">{{ card_title }}</h3>
         <img :src="img_url" alt="Imagen">
-        <p class="description">{{ description }}</p>
+        <p class="card-description">{{ card_description }}</p>
     </article>
 </template>
 
 <script>
 export default {
     props: {
-        title: String,
+        card_title: String,
         background_url: String,
         img_url: String,
-        description: String,
+        card_description: String,
     },
 };
 </script>
 
 <style scoped>
 .card {
-    margin: 6vw 8vw;
+    font-family: "Montserrat", sans-serif;
+    margin: 6svw 8svw;
     height: 580px;
     width: 350px;
     border-radius: 20px;
@@ -39,19 +40,23 @@ img {
     object-fit: contain;
 }
 
-.title{
+.card-title{
+    font-size: 1.4em;
     margin-top: 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 22px
 }
 
-.description {
-    padding: 0px 15px;
-    font-family: "Montserrat", sans-serif;
+.card-description {
+    font-size: 1.2em;
     font-weight: 700;
-    font-size: 20px;
     line-height: 1.5;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 0px 15px;
+}
+
+@media (max-width: 800px) {
+    .card {
+        margin: 10svh 8svw;
+    }
 }
 </style>

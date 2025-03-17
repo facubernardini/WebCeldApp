@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .download-btn {
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-size: 1em;
     height: 40px;
     width: 180px;
     padding: 10px 20px;
