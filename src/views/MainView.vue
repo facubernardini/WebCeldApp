@@ -11,6 +11,14 @@
                 <DownloadButton/>   
             </section>
 
+            <section class="about-project-container">
+                <h3 class="about-project">Sobre este proyecto</h3>
+                <p class="project-description"> <strong>CeldApp</strong> es una plataforma diseñada para facilitar la comprensión de los conceptos fundamentales de la estructura de los materiales. <br> <br> Su <strong>objetivo principal</strong> es proporcionar una herramienta accesible e interactiva que ayude a visualizar y estudiar los principios básicos de la ciencia de materiales. <br> <br>
+                    A través de este espacio, es posible explorar <strong>temas esenciales</strong> como los procesos de cristalización, los diagramas de fase binarios, las celdas unitarias y los índices de Miller. Además, el framework incorpora un módulo de <strong>realidad aumentada</strong>, que permite interactuar con modelos tridimensionales para mejorar la comprensión de estructuras cristalinas y sus propiedades. <br> <br>
+                    Pensado tanto para quienes se inician en el estudio de los materiales como para quienes buscan reforzar sus conocimientos, esta herramienta busca hacer más <strong>accesible</strong> y <strong>visual</strong> el aprendizaje de la cristalografía y sus aplicaciones. 
+                </p>
+            </section>
+
             <section class="cards-container">
                 <Card v-for="(card, index) in cards"
                     :key="index"
@@ -22,7 +30,7 @@
             </section>
 
             <section class="bottom-content">
-                <p>{{ bottomContent }}</p>
+                <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
             </section>
         </main>
 
@@ -46,13 +54,12 @@ export default {
             title: 'Una nueva forma \n de aprender \n ciencia de materiales',
             subtitle: 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.',
             cards: [
-                { card_title: 'Procesos de Cristalización', img_url: 'Cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
-                { card_title: 'Estructuras Cristalinas', img_url: 'EstructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
-                { card_title: 'Diagramas de Fase', img_url: 'DiagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
-                { card_title: 'Realidad Aumentada', img_url: 'RealidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
+                { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
+                { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
+                { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
+                { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
             ],
-            bottomContent: '¡Gracias por usar CeldApp!',
-            footer: 'Copyright © 2025 CeldApp. Todos los derechos reservados',
+            footer: '© 2025 CeldApp. Todos los derechos reservados',
         };
     }
 };
@@ -61,11 +68,12 @@ export default {
 <style>
 
 .home {
-    background-image: url('@/assets/fondo.png');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    min-height: 100svh;
+    background-color: black;
+    background-image: url('@/assets/fondoDesktopTop.png'), url('@/assets/fondoDesktopBot.png');
+    background-size: contain, contain;
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    font-family: "Montserrat", sans-serif;
 }
 
 .top-content {
@@ -78,7 +86,6 @@ export default {
 }
 
 .title {
-    font-family: "Montserrat", sans-serif;
     font-size: clamp(1.8em, 5vw, 2.5em);
     font-weight: bold;
     white-space: pre-line;
@@ -90,13 +97,31 @@ export default {
 }
 
 .subtitle {
-    font-family: "Montserrat", sans-serif;
     font-size: clamp(0.85em, 3vw, 1.1em);
     font-weight: 200;
     color: beige;
     white-space: pre-line;
     flex: 1;
     margin-top: 10svh;
+}
+
+.about-project-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40vh 15vw 0vh;
+    color: white;
+    text-align: center;
+}
+
+.about-project {
+    font-size: 1.6em;
+}
+
+.project-description {
+    font-size: clamp(0.95em, 3vw, 1.1em);
+    font-weight: 200;
+    line-height: 1.6;
+    padding: 5vh 0vh;
 }
 
 .cards-container {
@@ -107,11 +132,13 @@ export default {
 }
 
 .bottom-content {
-    font-family: "Montserrat", sans-serif;
-    font-size: clamp(1.4em, 3vw, 1.8em);
+    font-size: clamp(0.95em, 3vw, 1.1em);
+    font-weight: 200;
+    line-height: 1.6;
     color: white;
-    display: flex;
-    justify-content: center;
+    
+    text-align: center;
+    padding: 12vh 20vw;
 }
 
 .footer {
@@ -120,21 +147,19 @@ export default {
     font-weight: lighter;
     text-align: center;
     margin-top: 300px;
-    padding: 2svh 0svw;
+    padding: 1.6svh 0svw;
 }
 
 @media(max-width: 800px){
     
     .home {
-        background-color: black;
-        background-image: url('@/assets/fondoMobile.png');
-        background-size: contain;
+        background-image: url('@/assets/fondoMobileTop.png'), url('@/assets/fondoMobileBot.png');
     }
 
     .title {
         align-content: flex-start;
         text-align: center;
-        flex: 5;
+        flex: 6;
         align-self: center;
         margin: auto;
         padding-top: 5svh;
@@ -144,10 +169,6 @@ export default {
         white-space: pre-line;
         flex: 1;
         margin-top: 10svh;
-    }
-
-    .footer {
-        background-color: #8cccd9;
     }
 
 }

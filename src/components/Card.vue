@@ -33,16 +33,16 @@ export default {
     box-shadow: 0 4px 20px rgba(112, 229, 255, 0.65);
 }
 
-img {
-    padding: 50px;
-    width: 100%;
-    height: 65%;
-    object-fit: contain;
-}
-
 .card-title{
     font-size: 1.4em;
     margin-top: 25px;
+}
+
+img {
+    padding: 10px 40px 40px;
+    width: 100%;
+    height: 65%;
+    object-fit: contain;
 }
 
 .card-description {

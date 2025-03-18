@@ -8,7 +8,7 @@ Tiene como objetivo **informar** a los usuarios sobre las funcionalidades de la 
 
 + **Vue 3** - Framework progresivo de JavaScript
 + **Vite** - Herramienta de desarrollo y construcción rápida
-+ **Firebase** - Hosting y despliegue
++ **Firebase** - Hosting y deploy
 + **Hostinger** - Proveedor de dominio
 
   
