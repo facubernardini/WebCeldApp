@@ -6,15 +6,13 @@
     </article>
 </template>
 
-<script>
-export default {
-    props: {
+<script setup>
+    defineProps({
         card_title: String,
         background_url: String,
         img_url: String,
         card_description: String,
-    },
-};
+    });
 </script>
 
 <style scoped>

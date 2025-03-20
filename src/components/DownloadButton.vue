@@ -2,15 +2,10 @@
     <button class="download-btn" @click="descargarApk">Descargar App</button>
 </template>
 
-<script>
-export default {
-    name: 'DownloadButton',
-    methods: {
-        descargarApk() {
-            const apkURL = 'https://drive.google.com/file/d/1WTD0vVcPm9jfGUG41NHGKXp7SmGoteoH/view?usp=sharing';
-            window.open(apkURL, '_blank');
-        }
-    }
+<script setup>
+const descargarApk = () => {
+    const apkURL = 'https://drive.google.com/file/d/1WTD0vVcPm9jfGUG41NHGKXp7SmGoteoH/view?usp=sharing';
+    window.open(apkURL, '_blank');
 }
 </script>
 

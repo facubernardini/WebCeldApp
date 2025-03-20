@@ -10,6 +10,7 @@ Tiene como objetivo **informar** a los usuarios sobre las funcionalidades de la 
 + **Vite** - Herramienta de desarrollo y construcción rápida
 + **Firebase** - Hosting y deploy
 + **Hostinger** - Proveedor de dominio
++ **Photoshop** - Diseño de elementos visuales (backgrounds, cards, etc)
 
   
 #### Acceso a la página web [aquí](https://celdapp.site)

@@ -3,14 +3,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    /*
     {
-      path: '/about',
-      name: 'about',
+      path: '/',
+      name: 'main',
 
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/MainView.vue'),
     },
-    */
+    {
+      path: '/manual',
+      name: 'userManual',
+
+      component: () => import('../views/UserManualView.vue'),
+    }    
   ],
 })
 

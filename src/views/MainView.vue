@@ -1,79 +1,72 @@
 <template>
-    <div class="home">
-        <header>
-            <NavBar/>
-        </header>
 
-        <main>
-            <section class="top-content">
-                <h1 class="title">{{ title }}</h1>
-                <article class="subtitle">{{ subtitle }}</article>
-                <DownloadButton/>   
-            </section>
+    <main class="homeMainView">
+        <section class="top-content">
+            <Transition name="fade">
+            <h1 v-if="cargado" class="title">{{ title }}</h1>
+            </Transition>
 
-            <section class="about-project-container">
-                <h3 class="about-project">Sobre este proyecto</h3>
-                <p class="project-description"> <strong>CeldApp</strong> es una plataforma diseñada para facilitar la comprensión de los conceptos fundamentales de la estructura de los materiales. <br> <br> Su <strong>objetivo principal</strong> es proporcionar una herramienta accesible e interactiva que ayude a visualizar y estudiar los principios básicos de la ciencia de materiales. <br> <br>
-                    A través de este espacio, es posible explorar <strong>temas esenciales</strong> como los procesos de cristalización, los diagramas de fase binarios, las celdas unitarias y los índices de Miller. Además, el framework incorpora un módulo de <strong>realidad aumentada</strong>, que permite interactuar con modelos tridimensionales para mejorar la comprensión de estructuras cristalinas y sus propiedades. <br> <br>
-                    Pensado tanto para quienes se inician en el estudio de los materiales como para quienes buscan reforzar sus conocimientos, esta herramienta busca hacer más <strong>accesible</strong> y <strong>visual</strong> el aprendizaje de la cristalografía y sus aplicaciones. 
-                </p>
-            </section>
+            <article v-if="cargado" class="subtitle">{{ subtitle }}</article>
+            <DownloadButton/>
+        </section>
 
-            <section class="cards-container">
-                <Card v-for="(card, index) in cards"
-                    :key="index"
-                    :card_title="card.card_title"
-                    :background_url="card.background_url"
-                    :img_url="card.img_url"
-                    :card_description="card.card_description"
-                />
-            </section>
+        <section id="about" class="about-project-container">
+            <h3 class="about-project">Sobre este proyecto</h3>
+            <p class="project-description"> <strong>CeldApp</strong> es una plataforma diseñada para facilitar la comprensión de los conceptos fundamentales de la estructura de los materiales. </p>
+            <p class="project-description"> Su <strong>objetivo principal</strong> es proporcionar una herramienta accesible e interactiva que ayude a visualizar y estudiar los principios básicos de la ciencia de materiales. </p>
+            <p class="project-description"> A través de este espacio, es posible explorar <strong>temas esenciales</strong> como los procesos de cristalización, los diagramas de fase binarios, las celdas unitarias y los índices de Miller. Además, el framework incorpora un módulo de <strong>realidad aumentada</strong>, que permite interactuar con modelos tridimensionales para mejorar la comprensión de estructuras cristalinas y sus propiedades. </p>
+            <p class="project-description"> Pensado tanto para quienes se inician en el estudio de los materiales como para quienes buscan reforzar sus conocimientos, esta herramienta busca hacer más <strong>accesible</strong> y <strong>visual</strong> el aprendizaje de la cristalografía y sus aplicaciones. </p>
+        </section>
 
-            <section class="bottom-content">
-                <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
-            </section>
-        </main>
+        <section class="cards-container">
+            <Card v-for="(card, index) in cards"
+                :key="index"
+                :card_title="card.card_title"
+                :background_url="card.background_url"
+                :img_url="card.img_url"
+                :card_description="card.card_description"
+            />
+        </section>
 
-        <footer>
-            <article>
-                <h2 class="footer">{{ footer }}</h2>
-            </article>
-        </footer>
-    </div>
+        <section class="bottom-content">
+            <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
+        </section>
+    </main>
+
 </template>
 
-<script>
+<script setup>
 import Card from '@/components/Card.vue';
 import DownloadButton from '@/components/DownloadButton.vue'
-import NavBar from '@/components/NavBar.vue'
+import { ref, onMounted } from 'vue';
 
-export default {
-    components: { Card, DownloadButton, NavBar },
-    data() {
-        return {
-            title: 'Una nueva forma \n de aprender \n ciencia de materiales',
-            subtitle: 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.',
-            cards: [
-                { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
-                { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
-                { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
-                { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
-            ],
-            footer: '© 2025 CeldApp. Todos los derechos reservados',
-        };
-    }
-};
+const cargado = ref(false);
+
+onMounted(() => {
+    cargado.value = true; 
+});
+
+const title =  'Una nueva forma \n de aprender \n ciencia de materiales';
+const subtitle = 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.';
+const cards = [
+    { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
+    { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
+    { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
+    { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
+]
 </script>
 
 <style>
-
-.home {
+.homeMainView {
+    position: relative;
+    z-index: 1;
     background-color: black;
     background-image: url('@/assets/fondoDesktopTop.png'), url('@/assets/fondoDesktopBot.png');
     background-size: contain, contain;
     background-position: top, bottom;
     background-repeat: no-repeat, no-repeat;
     font-family: "Montserrat", sans-serif;
+    padding-top: 6vh;
 }
 
 .top-content {
@@ -86,42 +79,43 @@ export default {
 }
 
 .title {
-    font-size: clamp(1.8em, 5vw, 2.5em);
+    font-size: clamp(1.8em, 3vw, 2.5em);
     font-weight: bold;
     white-space: pre-line;
     align-content: center;
     text-align: start;
-    flex: 6;
     align-self: flex-start;
     margin-left: 28svw;
+    padding-top: 10vw;
 }
 
 .subtitle {
     font-size: clamp(0.85em, 3vw, 1.1em);
     font-weight: 200;
-    color: beige;
+    color: white;
     white-space: pre-line;
-    flex: 1;
-    margin-top: 10svh;
+    margin-top: 28svh;
 }
 
 .about-project-container {
     display: flex;
     flex-direction: column;
-    padding: 40vh 15vw 0vh;
+    margin-top: 12vh;
+    padding: 10vh 15vw 0vh;
     color: white;
     text-align: center;
 }
 
 .about-project {
     font-size: 1.6em;
+    padding-bottom: 5vh;
 }
 
 .project-description {
     font-size: clamp(0.95em, 3vw, 1.1em);
     font-weight: 200;
     line-height: 1.6;
-    padding: 5vh 0vh;
+    padding: 3vh 0vh;
 }
 
 .cards-container {
@@ -136,23 +130,22 @@ export default {
     font-weight: 200;
     line-height: 1.6;
     color: white;
-    
     text-align: center;
-    padding: 12vh 20vw;
+    padding: 5vh 20vw 55vh;
 }
 
-.footer {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: clamp(0.7em, 3vw, 1em);
-    font-weight: lighter;
-    text-align: center;
-    margin-top: 300px;
-    padding: 1.6svh 0svw;
+/* Animaciones de entrada */
+.fade-enter-active {
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+.fade-enter-from {
+    opacity: 0;
+    transform: translateX(40px);
 }
 
 @media(max-width: 800px){
     
-    .home {
+    .homeMainView {
         background-image: url('@/assets/fondoMobileTop.png'), url('@/assets/fondoMobileBot.png');
     }
 
@@ -170,6 +163,5 @@ export default {
         flex: 1;
         margin-top: 10svh;
     }
-
 }
 </style>
