@@ -29,6 +29,7 @@
                     <li>Capacidad de generar una simulación para ver el ordenamiento atómico para distintos metales.</li>
                     <li>Posibilidad de seleccionar entre los distintos materiales disponibles y establecer sus proporciones.</li>
                     <li>Observación de los límite de grano formados.</li>
+                    <li>Capacidad para hacer zoom logrando una mejor visualización de la simulación obtenida.</li>
                 </ul>
                 <h3>Observaciones</h3>
                 <p>La simulación genera gran carga computacional en el dispositivo, por lo tanto, puede observar trabas o tirones.</p>
@@ -38,15 +39,69 @@
         </section>
 
         <section id="estructuras-cristalinas" class="modulo-container">
-            <h2 class="modulo">Estructuras Cristalinas</h2>
+            <div class="modulo-descripcion">
+                <h2 class="modulo">Estructuras Cristalinas</h2>
+                <p>En esta sección podrás interactuar con distintas celdas unitarias, las cuales describen diversas organizaciones de átomos en las estructuras cristalinas.</p>
+                <ul>
+                    <li>Cúbica centrada en el cuerpo</li>
+                    <li>Cúbica centrada en las caras</li>
+                    <li>Hexagonal compacta</li>
+                </ul>
+                <p>La interfaz te permite modificar los parámetros para visualizar en tiempo real distintos conceptos clave de las estructuras cristalinas.</p>
+                <h3>Funcionalidades principales</h3>
+                <ul>
+                    <li>Rotar y hacer zoom de las estructuras cristalinas.</li>
+                    <li>Modificar los puntos de intersección del plano de corte con los ejes cartesianos.</li>
+                    <li>Observar los valores de los índices de Miller obtenidos.</li>
+                    <li>Generar un corte de la celda unitaria en dirección al plano posicionado anteriormenente.</li>
+                    <li>Establecer los índices de Miller (valores X, Y, Z) y generar el plano equivalente a partir de los valores indicados.</li>
+                    <li>Activar una vista expandida de la estructura cristalina, para observar como es generada por el apilamiento de los átomos. </li>
+                    <li>Visualizar los sistemas de deslizamiento predefinidos para cada celda unitaria.</li>
+                </ul>
+            </div>
+            <Video :video_url="url_video_estructuras_cristalinas"></Video>
         </section>
 
         <section id="diagramas-fase" class="modulo-container">
-            <h2 class="modulo">Diagramas de Fase</h2>
+            <div class="modulo-descripcion">
+                <h2 class="modulo">Diagramas de Fase</h2>
+                <p>En este módulo podrás analizar e interactuar con tres tipos de diagramas de fase binarios.</p>
+                <ul>
+                    <li>Cobre - Níquel</li>
+                    <li>Plomo - Estaño</li>
+                    <li>Hierro - Carbono</li>
+                </ul>
+                <p>Serás capaz de modificar distintos parámetros, como la temperatura, para observar el comportamiento de los distintos estados alcanzados por las aleaciones.</p>
+                <h3>Funcionalidades principales</h3>
+                <ul>
+                    <li>Establecer la proporción de los materiales de la aleación seleccionada.</li>
+                    <li>Variar la temperatura en que se encuentra.</li>
+                    <li>Observar las distintas zonas del gráfico, relacionadas a las fases presentes en la aleación para determinada temperatura y proporción de los materiales.</li>
+                    <li>Observar e interpretar el comportamiento de la regla de la palanca de manera dinámica, según la variación de los parámetros.</li>
+                    <li>Generación de una tabla de resultados, donde se podrán identificar los porcentajes de los materiales para la fase en la que se encuentran en dicha aleación, como así también su fracción en peso.</li>
+                    <li>Capacidad de hacer zoom para observar los gráficos de manera mas óptima.</li>
+                </ul>
+                <h3>Observaciones</h3>
+                <p>Puede observar algún pequeño error o desvío en los resultados para ciertos casos límite.</p>
+            </div>
+            <Video :video_url="url_video_diagramas_de_fase"></Video>
         </section>
 
         <section id="realidad-aumentada" class="modulo-container">
-            <h2 class="modulo">Realidad Aumentada</h2>
+            <div class="modulo-descripcion">
+                <h2 class="modulo">Realidad Aumentada</h2>
+                <p>Este último apartado permitirá reforzar tus conocimientos adquiridos sobre estructuras cristalinas haciendo uso de la realidad aumentada. </p>
+                <h3>Funcionalidades principales</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <h3>Observaciones</h3>
+                <p>Deberas asegurarte que la aplicación detectó correctamente una superficie plana para poder colocar el objeto 3D.</p>
+                <p>Es importante que te encuentres en una espacio amplio y con buena luz.</p>
+            </div>
+            <Video :video_url="url_video_realidad_aumentada"></Video>
         </section>
 
         <div class="fondo-footer"></div>
