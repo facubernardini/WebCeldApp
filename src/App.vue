@@ -10,7 +10,7 @@
 		
 		<footer>
 			<article>
-				<h2 class="footer">© 2025 CeldApp. Todos los derechos reservados</h2>
+				<h2 class="footer">© 2025 CeldApp.</h2>
 			</article>
 		</footer>
 	</div>
@@ -24,9 +24,9 @@ import { ref, onMounted } from 'vue';
 const cargado = ref(false);
 
 onMounted(() => {
-  setTimeout(() => {
-    cargado.value = true;
-  }, 300);
+  	setTimeout(() => {
+    	cargado.value = true;
+  	}, 300);
 });
 </script>
 

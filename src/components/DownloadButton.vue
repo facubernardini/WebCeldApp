@@ -22,6 +22,7 @@ const descargarApk = () => {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
+    margin-top: 3vh;
 }
 
 .download-btn:hover {

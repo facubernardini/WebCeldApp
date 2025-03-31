@@ -10,10 +10,10 @@ const router = createRouter({
       component: () => import('../views/MainView.vue'),
     },
     {
-      path: '/manual',
-      name: 'userManual',
+      path: '/modulos',
+      name: 'modulos',
 
-      component: () => import('../views/UserManualView.vue'),
+      component: () => import('../views/ModulosView.vue'),
     }    
   ],
 })

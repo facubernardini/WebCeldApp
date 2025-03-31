@@ -1,5 +1,4 @@
 <template>
-
     <main class="homeMainView">
         <section class="top-content">
             <Transition name="fade">
@@ -32,7 +31,6 @@
             <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
         </section>
     </main>
-
 </template>
 
 <script setup>
@@ -121,7 +119,7 @@ const cards = [
 .cards-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 16svh 0;
+    margin: 12svh 0;
     flex-wrap: wrap;
 }
 
@@ -131,7 +129,10 @@ const cards = [
     line-height: 1.6;
     color: white;
     text-align: center;
-    padding: 5vh 20vw 55vh;
+    padding: 5vh 3vw;
+    margin: 0vh 20vw 50vh;
+    border: solid white;
+    border-width: 0.15em 0px 0.15em 0px;
 }
 
 /* Animaciones de entrada */
