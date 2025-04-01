@@ -24,6 +24,7 @@
                 :background_url="card.background_url"
                 :img_url="card.img_url"
                 :card_description="card.card_description"
+                @click="goToModulo(card.hash)"
             />
         </section>
 
@@ -36,21 +37,28 @@
 <script setup>
 import Card from '@/components/Card.vue';
 import DownloadButton from '@/components/DownloadButton.vue'
+import { useRouter } from 'vue-router';
 import { ref, onMounted } from 'vue';
 
+const router = useRouter();
 const cargado = ref(false);
 
 onMounted(() => {
     cargado.value = true; 
 });
 
+const goToModulo = (hash) => {
+    let ruta = "/modulos#" + hash;
+    router.push(ruta);
+};
+
 const title =  'Una nueva forma \n de aprender \n ciencia de materiales';
 const subtitle = 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.';
 const cards = [
-    { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales' },
-    { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte' },
-    { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones' },
-    { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés' },
+    { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales', hash: 'procesos-cristalizacion' },
+    { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
+    { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
+    { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
 ]
 </script>
 

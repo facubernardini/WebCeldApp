@@ -10,16 +10,6 @@
             <a class="indice" href="#realidad-aumentada">Realidad Aumentada</a>
         </section>
 
-        <section class="requisitos-container">
-            <h2 class="requisitos">Requisitos del Sistema</h2>
-            <p>Para un óptimo funcionamiento de la aplicación, asegúrate de cumplir con los siguientes requisitos:</p>
-            <ul>
-                <li><u>Sistema operativo</u>: Android 8.0 o superior</li>
-                <li><u>Memoria RAM</u>: 4gb o superior</li>
-                <li><u>Espacio libre</u>: 200mb</li>
-            </ul>
-        </section>
-
         <section id="procesos-cristalizacion" class="modulo-container">
             <div class="modulo-descripcion">
                 <h2 class="modulo">Procesos de Cristalización</h2>
@@ -41,7 +31,7 @@
         <section id="estructuras-cristalinas" class="modulo-container">
             <div class="modulo-descripcion">
                 <h2 class="modulo">Estructuras Cristalinas</h2>
-                <p>En esta sección podrás interactuar con distintas celdas unitarias, las cuales describen diversas organizaciones de átomos en las estructuras cristalinas.</p>
+                <p>En esta sección podrás interactuar con distintas celdas unitarias, las cuales describen diversas organizaciones de átomos en las estructuras cristalinas, como pueden ser:</p>
                 <ul>
                     <li>Cúbica centrada en el cuerpo</li>
                     <li>Cúbica centrada en las caras</li>
@@ -82,7 +72,7 @@
                     <li>Capacidad de hacer zoom para observar los gráficos de manera mas óptima.</li>
                 </ul>
                 <h3>Observaciones</h3>
-                <p>Puede observar algún pequeño error o desvío en los resultados para ciertos casos límite.</p>
+                <p>Puede observar algún pequeño error o desvío en cierto valor de los resultados para determinados casos límite.</p>
             </div>
             <Video :video_url="url_video_diagramas_de_fase"></Video>
         </section>
@@ -93,15 +83,24 @@
                 <p>Este último apartado permitirá reforzar tus conocimientos adquiridos sobre estructuras cristalinas haciendo uso de la realidad aumentada. </p>
                 <h3>Funcionalidades principales</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Capacidad de colocar un objeto 3D en una superficie plana.</li>
+                    <li>Interacción con el objeto en realidad aumentada.</li>
                 </ul>
                 <h3>Observaciones</h3>
-                <p>Deberas asegurarte que la aplicación detectó correctamente una superficie plana para poder colocar el objeto 3D.</p>
+                <p>Deberás asegurarte que la aplicación detectó correctamente una superficie plana para poder colocar el objeto 3D.</p>
                 <p>Es importante que te encuentres en una espacio amplio y con buena luz.</p>
             </div>
             <Video :video_url="url_video_realidad_aumentada"></Video>
+        </section>
+
+        <section class="requisitos-container">
+            <h2 class="requisitos">Requisitos del Sistema</h2>
+            <p>Para un óptimo funcionamiento de la aplicación, asegúrate de cumplir con los siguientes requisitos:</p>
+            <ul>
+                <li><u>Sistema operativo</u>: Android 8.0 o superior</li>
+                <li><u>Memoria RAM</u>: 4gb o superior</li>
+                <li><u>Espacio libre</u>: 200mb</li>
+            </ul>
         </section>
 
         <div class="fondo-footer"></div>
@@ -127,19 +126,19 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
 }
 
 .top-container {
+    justify-self: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
+    width: 60vw;
     text-align: center;
-    background-color: black;
-    border-radius: 10px;
 }
 
 .modulos-titulo {
     font-size: 1.4em;
     width: 100%;
-    margin: 2vh 0vh;
+    margin: 1.5vh 0vh;
     color: white;
 }
 
@@ -150,16 +149,18 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
 }
 
 .requisitos-container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 3vh;
+    justify-self: center;
+    border: solid white;
+    border-width: 0em 0.15em 0em 0.15em;
+    padding: 1vh 3vh;
     height: auto;
-    margin: 4vh 2vh;
-    border-radius: 10px;
+    margin: 4vh;
+    border-radius: 0.4em;
+    transition: 0.3s;
 }
 
 .requisitos {
-    color: black;
+    color: white;
     font-weight: bold;
     margin-bottom: 2vh;
 }
@@ -167,15 +168,15 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
 .modulo-container {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(35, 35, 35);
     padding: 3vh 6vw 3vh 3vh;
     height: auto;
-    margin: 4vh 2vh;
+    margin: 4vh;
     border-radius: 10px;
 }
 
 .modulo {
-    color: black;
+    color: white;
     font-weight: bold;
     margin-bottom: 2vh;
 }
@@ -186,15 +187,18 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
 }
 
 p {
-    margin-bottom: 2vh;
+    margin: 2vh 0vh;
+    color: white;
 }
 
 h3 {
     margin: 2vh 0vh;
+    color: white;
 }
 
 ul li {
     margin: 1vh 1.5vw;
+    color: white;
 }
 
 .fondo-nav {
@@ -216,9 +220,14 @@ ul li {
 
 @media(max-width: 800px){
     
+    .requisitos-container {
+        margin: 2vh;
+    }
+
     .modulo-container {
         flex-direction: column;
         padding-right: 3vh;
+        margin: 5vh 2vh;
     }
 
     .modulo-descripcion {

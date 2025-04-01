@@ -15,13 +15,18 @@
 
 <style scoped>
 .container {
-    box-shadow: 0 0 6px 3px rgba(100, 100, 100, 0.5);
-    border-radius: 0.5vh;
+    box-shadow: 0 0 8px 3px rgba(100, 100, 100, 0.4);
+    border-radius: 1vh;
     align-self: center;
     overflow: hidden;
     width: 100%;
-    max-width: 35vh;
+    max-width: 30vh;
     margin: 0 auto;
+    transition: 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 0 15px 4px rgba(100, 100, 100, 0.5);
 }
 
 .video {
