@@ -17,18 +17,20 @@
 
 <style scoped>
 .card {
+    cursor: pointer;
     font-family: "Montserrat", sans-serif;
     margin: 6svw 8svw;
     height: 580px;
     width: 350px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(112, 229, 255, 0.65);
+    box-shadow: 0 0 4px 0 rgba(112, 229, 255, 0.65);
     transition: 0.5s;
 }
 
 .card:hover {
-    box-shadow: 0 4px 20px rgba(112, 229, 255, 0.65);
+    box-shadow: 0 0 10px rgba(112, 229, 255, 0.65);
+    transform: scale(1.01);
 }
 
 .card-title{
@@ -45,10 +47,9 @@ img {
 
 .card-description {
     font-size: 1.2em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: black;
     padding: 0px 15px;
 }
 

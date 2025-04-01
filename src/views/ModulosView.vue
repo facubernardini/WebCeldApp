@@ -3,11 +3,10 @@
         <div class="fondo-nav"></div>
 
         <section class="top-container">
-            <h1 class="modulos-titulo">Módulos</h1>
-            <a class="indice" href="#procesos-cristalizacion">Procesos de Cristalización</a>
-            <a class="indice" href="#estructuras-cristalinas">Estructuras Cristalinas</a>
-            <a class="indice" href="#diagramas-fase">Diagramas de Fase</a>
-            <a class="indice" href="#realidad-aumentada">Realidad Aumentada</a>
+            <a class="nombre-modulos" href="#procesos-cristalizacion">Procesos de Cristalización</a>
+            <a class="nombre-modulos" href="#estructuras-cristalinas">Estructuras Cristalinas</a>
+            <a class="nombre-modulos" href="#diagramas-fase">Diagramas de Fase</a>
+            <a class="nombre-modulos" href="#realidad-aumentada">Realidad Aumentada</a>
         </section>
 
         <section id="procesos-cristalizacion" class="modulo-container">
@@ -95,7 +94,7 @@
 
         <section class="requisitos-container">
             <h2 class="requisitos">Requisitos del Sistema</h2>
-            <p>Para un óptimo funcionamiento de la aplicación, asegúrate de cumplir con los siguientes requisitos:</p>
+            <p>Para un óptimo funcionamiento de la aplicación, se recomienda cumplir con los siguientes requisitos:</p>
             <ul>
                 <li><u>Sistema operativo</u>: Android 8.0 o superior</li>
                 <li><u>Memoria RAM</u>: 4gb o superior</li>
@@ -103,12 +102,15 @@
             </ul>
         </section>
 
-        <div class="fondo-footer"></div>
+        <div class="fondo-footer">
+            <Footer/>
+        </div>
     </main>
 </template>
 
 <script setup>
 import Video from '@/components/Video.vue';
+import Footer from '@/components/Footer.vue'
 
 const url_video_cristalizacion = 'Cristalizacion.mp4';
 const url_video_estructuras_cristalinas = 'EstructurasCristalinas.mp4';
@@ -133,19 +135,23 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
     height: auto;
     width: 60vw;
     text-align: center;
+    margin-top: 1.5em;
 }
 
-.modulos-titulo {
-    font-size: 1.4em;
-    width: 100%;
-    margin: 1.5vh 0vh;
+.nombre-modulos {
+    background-color: rgb(35, 35, 35);
+    font-size: 1em;
+    margin: 0.7em;
     color: white;
+    padding: 0.45em 0.6em;
+    border-radius: 1em;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.indice {
-    font-size: 0.9em;
-    margin: 2vh 3vw;
-    color: white;
+.nombre-modulos:hover {
+    background-color: white;
+    color: rgb(35, 35, 35);
 }
 
 .requisitos-container {
@@ -212,7 +218,7 @@ ul li {
 
 .fondo-footer {
     position: relative;
-    height: 55px;
+    padding: 0.5em 0em;
     width: 100%;
     background-color: #a8ebf3;
     border-radius: 20px 20px 0px 0px;

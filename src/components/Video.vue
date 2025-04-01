@@ -22,11 +22,12 @@
     width: 100%;
     max-width: 30vh;
     margin: 0 auto;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .container:hover {
     box-shadow: 0 0 15px 4px rgba(100, 100, 100, 0.5);
+    transform: scale(1.02);
 }
 
 .video {

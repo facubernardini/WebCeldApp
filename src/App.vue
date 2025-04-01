@@ -8,11 +8,6 @@
 
 		<router-view></router-view>
 		
-		<footer>
-			<article>
-				<h2 class="footer">© 2025 CeldApp.</h2>
-			</article>
-		</footer>
 	</div>
 
 </template>
@@ -41,20 +36,6 @@ onMounted(() => {
 	position: absolute;
 	width: 100%;
 	z-index: 10;
-}
-
-.footer {
-	position: absolute;
-	align-self: flex-end;
-	left: 0;
-	right: 0;
-	bottom: 0;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: clamp(0.7em, 3vw, 1em);
-    font-weight: lighter;
-    text-align: center;
-    padding: 1.6svh 0svw;
-	z-index: 5;
 }
 
 /* Animaciones de entrada */

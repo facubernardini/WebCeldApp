@@ -6,7 +6,11 @@
             </Transition>
 
             <article v-if="cargado" class="subtitle">{{ subtitle }}</article>
-            <DownloadButton/>
+            
+            <div class="contenedor-botones-descarga">
+                <DownloadButtonAndroid class="download-btn"/>
+                <DownloadButtonIos class="download-btn"/>
+            </div>
         </section>
 
         <section id="about" class="about-project-container">
@@ -31,12 +35,16 @@
         <section class="bottom-content">
             <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
         </section>
+
+        <Footer/>
     </main>
 </template>
 
 <script setup>
 import Card from '@/components/Card.vue';
-import DownloadButton from '@/components/DownloadButton.vue'
+import DownloadButtonAndroid from '@/components/DownloadButtonAndroid.vue'
+import DownloadButtonIos from '@/components/DownloadButtonIos.vue'
+import Footer from '@/components/Footer.vue'
 import { useRouter } from 'vue-router';
 import { ref, onMounted } from 'vue';
 
@@ -55,10 +63,10 @@ const goToModulo = (hash) => {
 const title =  'Una nueva forma \n de aprender \n ciencia de materiales';
 const subtitle = 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.';
 const cards = [
-    { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera un simulación con físicas realistas para observar como se cristalizan los diferentes materiales', hash: 'procesos-cristalizacion' },
-    { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
-    { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
-    { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
+    { card_title: 'Procesos de Cristalización', img_url: 'Cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera una simulación con físicas realistas para observar como se cristalizan los diferentes materiales', hash: 'procesos-cristalizacion' },
+    { card_title: 'Estructuras Cristalinas', img_url: 'EstructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
+    { card_title: 'Diagramas de Fase', img_url: 'DiagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
+    { card_title: 'Realidad Aumentada', img_url: 'RealidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
 ]
 </script>
 
@@ -101,6 +109,17 @@ const cards = [
     color: white;
     white-space: pre-line;
     margin-top: 28svh;
+}
+
+.contenedor-botones-descarga {
+    padding-top: 2vh;
+}
+
+.download-btn {
+    height: 4.2em;
+    width: 4.2em;
+    padding: 1em;
+    margin: 2vh;
 }
 
 .about-project-container {
