@@ -63,10 +63,10 @@ const goToModulo = (hash) => {
 const title =  'Una nueva forma \n de aprender \n ciencia de materiales';
 const subtitle = 'Una aplicación con el objetivo de ayudarte a entender \n conceptos complejos de forma amigable e interactiva.';
 const cards = [
-    { card_title: 'Procesos de Cristalización', img_url: 'Cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera una simulación con físicas realistas para observar como se cristalizan los diferentes materiales', hash: 'procesos-cristalizacion' },
-    { card_title: 'Estructuras Cristalinas', img_url: 'EstructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los Índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
-    { card_title: 'Diagramas de Fase', img_url: 'DiagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
-    { card_title: 'Realidad Aumentada', img_url: 'RealidadAumentada.png', background_url: 'Card4.png', card_description: 'Descrubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
+    { card_title: 'Procesos de Cristalización', img_url: 'cristalizacion.png', background_url: 'Card1.png', card_description: 'Genera una simulación con físicas realistas para observar como se cristalizan los diferentes materiales', hash: 'procesos-cristalizacion' },
+    { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
+    { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
+    { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
 ]
 </script>
 
@@ -85,7 +85,7 @@ const cards = [
 
 .top-content {
     display: flex;
-    height: 88svh;
+    height: 92svh;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -100,7 +100,7 @@ const cards = [
     text-align: start;
     align-self: flex-start;
     margin-left: 28svw;
-    padding-top: 10vw;
+    padding-top: clamp(2vh, 10vw, 20vh);
 }
 
 .subtitle {
@@ -189,7 +189,7 @@ const cards = [
     .subtitle {
         white-space: pre-line;
         flex: 1;
-        margin-top: 10svh;
+        margin-top: 40svh;
     }
 }
 </style>
