@@ -29,8 +29,8 @@
 }
 
 .card:hover {
-    box-shadow: 0 0 10px rgba(112, 229, 255, 0.65);
-    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(112, 229, 255, 0.7);
+    transform: scale(1.02);
 }
 
 .card-title{

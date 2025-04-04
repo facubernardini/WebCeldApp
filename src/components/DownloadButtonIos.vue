@@ -16,12 +16,12 @@ const descargarApk = () => {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .download-btn:hover {
-    background-color: #5ac3cf;
-    box-shadow: 0px 0px 5px rgba(112, 229, 255, 0.4);
+    background-color: #50b2bd;
+    box-shadow: 0px 0px 8px 2px rgba(112, 229, 255, 0.4);
 }
 
 </style>
