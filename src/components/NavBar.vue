@@ -16,8 +16,8 @@
             <li><router-link to="/modulos" @click="hideSidebar">Módulos</router-link></li>
             <li><a href="#about" @click="hideSidebar">Acerca de</a></li>
             <div class="botones-descarga-container">
-                <li><DownloadButtonAndroid/></li>
-                <li><ExecuteAppButton/></li>
+                <li><DownloadButtonAndroid @click="hideSidebar"/></li>
+                <li><ExecuteAppButton @click="hideSidebar"/></li>
             </div>
         </ul>
     </nav>

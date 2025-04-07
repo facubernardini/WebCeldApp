@@ -21,8 +21,9 @@
                     <li>Capacidad para hacer zoom logrando una mejor visualización de la simulación obtenida.</li>
                 </ul>
                 <h3>Observaciones</h3>
-                <p>La simulación genera gran carga computacional en el dispositivo, por lo tanto, puede observar trabas o tirones.</p>
-                <p>Esto es completamente normal, y no pone en riesgo el dispositivo. Solo debes esperar a que pasen unos segundos hasta que se complete la simulación.</p>
+                <ul>
+                    <li>La simulación genera gran carga computacional en el dispositivo, por lo tanto, puede observar trabas o tirones. <br> Esto es completamente normal, y no pone en riesgo el dispositivo. Solo debes esperar a que pasen unos segundos hasta que se complete la simulación.</li>
+                </ul>
             </div>
             <Video :video_url="url_video_cristalizacion"></Video>
         </section>
@@ -71,7 +72,9 @@
                     <li>Capacidad de hacer zoom para observar los gráficos de manera mas óptima.</li>
                 </ul>
                 <h3>Observaciones</h3>
-                <p>Puede observar algún pequeño error o desvío en cierto valor de los resultados para determinados casos límite.</p>
+                <ul>
+                    <li>Puede observar algún pequeño error o desvío en cierto valor de los resultados para determinados casos límite.</li>
+                </ul>
             </div>
             <Video :video_url="url_video_diagramas_de_fase"></Video>
         </section>
@@ -79,15 +82,18 @@
         <section id="realidad-aumentada" class="modulo-container">
             <div class="modulo-descripcion">
                 <h2 class="modulo">Realidad Aumentada</h2>
-                <p>Este último apartado permitirá reforzar tus conocimientos adquiridos sobre estructuras cristalinas haciendo uso de la realidad aumentada. </p>
+                <p>Este último apartado permitirá reforzar tus conocimientos adquiridos sobre estructuras cristalinas haciendo uso de la realidad aumentada en tu dispositivo móvil. </p>
                 <h3>Funcionalidades principales</h3>
                 <ul>
                     <li>Capacidad de colocar un objeto 3D en una superficie plana.</li>
+                    <li>Rotación y zoom del objeto 3D tocando la pantalla.</li>
                     <li>Interacción con el objeto en realidad aumentada.</li>
                 </ul>
                 <h3>Observaciones</h3>
-                <p>Deberás asegurarte que la aplicación detectó correctamente una superficie plana para poder colocar el objeto 3D.</p>
-                <p>Es importante que te encuentres en una espacio amplio y con buena luz.</p>
+                <ul>
+                    <li>Deberás asegurarte que la aplicación detectó correctamente una superficie plana para poder colocar el objeto 3D.</li>
+                    <li>Es importante que te encuentres en una espacio amplio y con buena luz.</li>
+                </ul>
             </div>
             <Video :video_url="url_video_realidad_aumentada"></Video>
         </section>

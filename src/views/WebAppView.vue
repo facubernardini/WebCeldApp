@@ -2,7 +2,9 @@
     <main class="webAppView">
         <div class="fondo-nav"></div>
 
-        <iframe class="app-unity" src="../CeldApp/index.html" width="100%" height="1280px" style="border: none;" allow="fullscreen"></iframe>
+        <div class="app-unity">
+            <iframe src="../CeldApp/index.html" width="480" height="1400" style="border: none;" allow="fullscreen"></iframe>
+        </div>
 
         <div class="fondo-footer">
             <Footer/>
@@ -34,7 +36,11 @@ import Footer from '@/components/Footer.vue'
 }
 
 .app-unity {
-    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
 }
 
 .fondo-footer {
