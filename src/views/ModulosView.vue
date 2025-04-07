@@ -1,5 +1,5 @@
 <template>
-    <main class="homeAboutView">
+    <main class="modulosView">
         <div class="fondo-nav"></div>
 
         <section class="top-container">
@@ -119,12 +119,12 @@ const url_video_realidad_aumentada = 'RealidadAumentada.mp4';
 </script>
 
 <style scoped>
-.homeAboutView {
+.modulosView {
     position: relative;
     z-index: 1;
     background-color: black;
     font-family: "Montserrat", sans-serif;
-    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .top-container {

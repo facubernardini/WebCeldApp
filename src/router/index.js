@@ -14,7 +14,13 @@ const router = createRouter({
       name: 'modulos',
 
       component: () => import('../views/ModulosView.vue'),
-    }    
+    },
+    {
+      path: '/app',
+      name: 'app',
+
+      component: () => import('../views/WebAppView.vue'),
+    }  
   ],
   scrollBehavior(to) {
     if (to.hash) {

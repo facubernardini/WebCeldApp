@@ -1,5 +1,5 @@
 <template>
-    <main class="homeMainView">
+    <main class="mainView">
         <section class="top-content">
             <Transition name="fade">
             <h1 v-if="cargado" class="title">{{ title }}</h1>
@@ -9,7 +9,7 @@
             
             <div class="contenedor-botones-descarga">
                 <DownloadButtonAndroid class="download-btn"/>
-                <DownloadButtonIos class="download-btn"/>
+                <ExecuteAppButton class="download-btn"/>
             </div>
         </section>
 
@@ -43,7 +43,7 @@
 <script setup>
 import Card from '@/components/Card.vue';
 import DownloadButtonAndroid from '@/components/DownloadButtonAndroid.vue'
-import DownloadButtonIos from '@/components/DownloadButtonIos.vue'
+import ExecuteAppButton from '@/components/ExecuteAppButton.vue'
 import Footer from '@/components/Footer.vue'
 import { useRouter } from 'vue-router';
 import { ref, onMounted } from 'vue';
@@ -71,7 +71,7 @@ const cards = [
 </script>
 
 <style>
-.homeMainView {
+.mainView {
     position: relative;
     z-index: 1;
     background-color: black;
@@ -112,6 +112,7 @@ const cards = [
 }
 
 .contenedor-botones-descarga {
+    display: flex;
     padding-top: 2vh;
 }
 
@@ -173,7 +174,7 @@ const cards = [
 
 @media(max-width: 800px){
     
-    .homeMainView {
+    .mainView {
         background-image: url('@/assets/fondoMobileTop.png'), url('@/assets/fondoMobileBot.png');
     }
 

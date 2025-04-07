@@ -15,9 +15,9 @@
             <li><a href="https://forms.gle/RGtXSKyGDoJ5qBki6" target="_blank" rel="noopener noreferrer">Reporte de errores</a></li>
             <li><router-link to="/modulos" @click="hideSidebar">Módulos</router-link></li>
             <li><a href="#about" @click="hideSidebar">Acerca de</a></li>
-            <div class="botones-descarga">
-                <li class="download-button"><DownloadButtonAndroid/></li>
-                <li class="download-button"><DownloadButtonIos/></li>
+            <div class="botones-descarga-container">
+                <li><DownloadButtonAndroid/></li>
+                <li><ExecuteAppButton/></li>
             </div>
         </ul>
     </nav>
@@ -25,7 +25,7 @@
 
 <script setup>
 import DownloadButtonAndroid from '@/components/DownloadButtonAndroid.vue'
-import DownloadButtonIos from '@/components/DownloadButtonIos.vue'
+import ExecuteAppButton from '@/components/ExecuteAppButton.vue'
 
 function showSidebar(){
     const sideBar = document.querySelector('.sidebar')
@@ -53,7 +53,7 @@ nav ul {
 
 nav ul li {
     padding: 15px 10px;
-    margin: 0 1svw;
+    margin: 0 1vw;
     text-align: center;
 }
 
@@ -93,8 +93,12 @@ nav ul li a:hover {
     align-self: flex-end;
 }
 
-.botones-descarga {
+.botones-descarga-container {
+    width: auto;
     display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-left: 1.3em;
 }
 
 @media(max-width: 800px){
@@ -105,17 +109,6 @@ nav ul li a:hover {
 
     .hideOnMobile {
         display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-}
-
-@media(max-width: 400px){
-    
-    .sidebar {
-        width: 100svw;
     }
 
     .menu-button {
