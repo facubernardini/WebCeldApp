@@ -38,7 +38,7 @@ import Footer from '@/components/Footer.vue'
 .app-unity {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 95svh;
     width: auto;
     overflow: hidden;
 }
@@ -49,10 +49,5 @@ import Footer from '@/components/Footer.vue'
     width: 100%;
     background-color: #a8ebf3;
     border-radius: 20px 20px 0px 0px;
-}
-
-@media(max-width: 800px){
-    
-
 }
 </style>
