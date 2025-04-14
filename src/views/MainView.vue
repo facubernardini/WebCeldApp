@@ -192,5 +192,6 @@ const cards = [
         flex: 1;
         margin-top: 40svh;
     }
+    
 }
 </style>

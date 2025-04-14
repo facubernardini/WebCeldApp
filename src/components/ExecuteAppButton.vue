@@ -48,6 +48,7 @@ svg {
 @media(max-width: 800px){
 
     button {
+        display: none; /* Boton oculto en mobile hasta solucionar error en la app online */
         width: 12em;
     }
 
