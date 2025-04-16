@@ -4,7 +4,7 @@
 
 <script setup>
 const descargarApk = () => {
-    const apkURL = 'https://drive.google.com/file/d/1WTD0vVcPm9jfGUG41NHGKXp7SmGoteoH/view?usp=sharing';
+    const apkURL = 'https://github.com/facubernardini/ProyectoFinalDeCarrera/releases/download/v1.0.0/CeldApp.apk';
     window.open(apkURL, '_blank');
 }
 </script>
