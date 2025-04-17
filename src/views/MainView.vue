@@ -36,10 +36,10 @@
             <p> La <strong>ciencia de los materiales</strong> es un campo en constante evolución, y cada nuevo conocimiento abre puertas a innovaciones y descubrimientos. Esperamos que este espacio contribuya a tu aprendizaje y te <strong>inspire</strong> a seguir explorando el fascinante mundo de los materiales y sus estructuras. <br> <br> <br> ¡El futuro de la ciencia siempre comienza con la <strong>curiosidad</strong> y el deseo de <strong>aprender</strong>!</p>
         </section>
 
-        <section class="marquee-container">
-            <div class="logo-marquee">
-                <img v-for="(logo, index) in logos" :key="index" :src="logo" class="logo" />
-            </div>
+        <section class="logos-container">
+            <a href="https://www.uns.edu.ar/" target="_blank"><img src="/logo_uns.png" alt="Logo UNS" class="logo"></a>
+            <a href="https://cs.uns.edu.ar/~devcs/" target="_blank"><img src="/logo_dcic.png" alt="Logo DCIC" class="logo"></a>
+            <a href="http://vyglab.cs.uns.edu.ar/webpage/index.php/es/" target="_blank"><img src="/logo_vyglab.png" alt="Logo VyGLAB" class="logo"></a>
         </section>
 
         <Footer/>
@@ -73,11 +73,6 @@ const cards = [
     { card_title: 'Estructuras Cristalinas', img_url: 'estructurasCristalinas.png', background_url: 'Card2.png', card_description: 'Visualiza las diferentes celdas unitarias e interactúa con los índices de Miller para obtener planos de corte', hash: 'estructuras-cristalinas' },
     { card_title: 'Diagramas de Fase', img_url: 'diagramasDeFase.png', background_url: 'Card3.png', card_description: 'Observa los distintos gráficos que describen las fases y puntos de equilibrio para diversas aleaciones', hash: 'diagramas-fase' },
     { card_title: 'Realidad Aumentada', img_url: 'realidadAumentada.png', background_url: 'Card4.png', card_description: 'Descubre la Realidad Aumentada y aprende de forma didáctica e interactiva temas de interés', hash: 'realidad-aumentada' },
-]
-const logos = [
-  'logo_uns.png',
-  'logo_dcic.png',
-  'logo_vyglab.png'
 ]
 </script>
 
@@ -169,30 +164,28 @@ const logos = [
     color: white;
     text-align: center;
     padding: 5vh 3vw;
-    margin: 0vh 20vw 25vh;
+    margin: 0vh 20vw 22vh;
     border: solid white;
     border-width: 0.15em 0px 0.15em 0px;
 }
 
-.marquee-container {
+.logos-container {
+    display: flex;
+    justify-content: space-around;
     inset: 0;
     margin: auto;
-    width: 40vw;
-    margin-bottom: 40vh;
-    overflow: hidden;
-}
-
-.logo-marquee {
-    display: flex;
-    width: 50em;
-    justify-content: space-between;
-    align-items: center;
-    animation: moveLogos 15s linear infinite;
+    width: 60vw;
+    margin-bottom: 38vh;
 }
 
 .logo {
-    width: 200px;
-    height: auto;
+    height: 60px;
+    width: auto;
+    transition: 0.4s;
+}
+
+.logo:hover {
+    transform: scale(1.06);
 }
 
 /* Animaciones de entrada */
@@ -225,19 +218,18 @@ const logos = [
         margin-top: 40svh;
     }
 
-    .marquee-container {
-        width: 80vw;
-    }  
-}
-
-@keyframes moveLogos {
-
-    0% {
-        transform: translateX(100%);
+    .bottom-content {
+        margin-bottom: 15vh;
     }
 
-    100% {
-        transform: translateX(-100%);
+    .logos-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20vh;
+    }
+
+    .logo {
+        margin: 3vh 0vh;
     }
 }
 </style>
