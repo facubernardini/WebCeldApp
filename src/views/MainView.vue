@@ -179,7 +179,7 @@ const cards = [
 }
 
 .logo {
-    height: 60px;
+    height: 65px;
     width: auto;
     transition: 0.4s;
 }
