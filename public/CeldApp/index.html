@@ -16,8 +16,11 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+      <div id="unity-warning"> </div>
       <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">CeldApp</div>
       </div>
     </div>
     <script>
@@ -28,6 +31,17 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
+
+      function sendHeight() {
+        const height = document.documentElement.scrollHeight;
+        
+        window.parent.postMessage({
+            type: 'resize-iframe',
+            height: height
+        }, '*');
+      }
+
+      window.onload = sendHeight;
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -54,15 +68,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/CeldAppWeb.loader.js";
+      var loaderUrl = buildUrl + "/CeldApp.loader.js";
       var config = {
-        dataUrl: buildUrl + "/CeldAppWeb.data",
-        frameworkUrl: buildUrl + "/CeldAppWeb.framework.js",
-        codeUrl: buildUrl + "/CeldAppWeb.wasm",
+        dataUrl: buildUrl + "/CeldApp.data.gz",
+        frameworkUrl: buildUrl + "/CeldApp.framework.js.gz",
+        codeUrl: buildUrl + "/CeldApp.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "FacundoBernardini",
         productName: "CeldApp",
-        productVersion: "1.0",
+        productVersion: "1.0.1",
         showBanner: unityShowBanner,
       };
 
@@ -95,7 +109,7 @@
         canvas.style.height = "854px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/CeldAppWeb.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/CeldApp.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");

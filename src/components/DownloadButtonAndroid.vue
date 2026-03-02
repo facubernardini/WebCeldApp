@@ -4,7 +4,7 @@
 
 <script setup>
 const descargarApk = () => {
-    const apkURL = 'https://github.com/facubernardini/ProyectoFinalDeCarrera/releases/download/v1.0.0/CeldApp.apk';
+    const apkURL = 'https://github.com/facubernardini/ProyectoFinalDeCarrera/releases/download/v1.0.1/CeldApp.apk';
     window.open(apkURL, '_blank');
 }
 </script>
