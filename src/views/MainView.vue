@@ -2,7 +2,7 @@
     <main class="mainView">
         <section class="top-content">
             <Transition name="fade">
-            <h1 v-if="cargado" class="title">{{ title }}</h1>
+                <h1 v-if="cargado" class="title">{{ title }}</h1>
             </Transition>
 
             <article v-if="cargado" class="subtitle">{{ subtitle }}</article>
